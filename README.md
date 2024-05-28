@@ -9,7 +9,7 @@
 
 ## 스터디 진행 방식
 
-### PullRequest 방식
+### Pull Request 방식
 
 1. 현재 공통 Repository에는 스터디원 5명에 해당하는 GitHub 계정 username을 가진 Branch와 Directory를 생성이 되어 있음.
 2. 각 스터디원은 자신의 GitHub 계정 username을 가진 Branch와 Directory에 스터디 자료들(Markdown 문서, 블로그 링크, 노션 링크, 등) 넣는다. </br>
