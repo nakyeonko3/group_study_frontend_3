@@ -1,4 +1,4 @@
-# group_study_frontend_4
+# group_study_frontend_3
 사이드 프로젝트를 위한 리포지토리 
 
 ## 만들 예정
