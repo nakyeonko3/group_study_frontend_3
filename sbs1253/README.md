@@ -8,8 +8,9 @@
 
 ## [블로그](https://sbs1253.github.io/)
 
-ruby 설치
-[Jekyll](https://jekyllrb.com/)의 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 템플릿 사용
+- ruby 설치
+- [Jekyll](https://jekyllrb.com/)의 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 템플릿 사용
+- [Jekyll-Compose](https://github.com/jekyll/jekyll-compose)
 
 ### 선정이유
 
