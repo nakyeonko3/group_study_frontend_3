@@ -18,7 +18,8 @@
 
 ## Jekyll
 
-Jekyll 를 사용하여 생성한 뒤 GitHub Pages 에 배포합니다.
+Jekyll 를 사용하여 생성한 뒤 GitHub Pages 에 배포합니다.<br>
+'LOFFER' 테마 사용 ( http://jekyllthemes.org/themes/LOFFER/)
 
 ### 장점
 1. GitHub Pages와 완벽하게 통합되어 별도의 설정 없이 쉽게 배포 가능합니다.
