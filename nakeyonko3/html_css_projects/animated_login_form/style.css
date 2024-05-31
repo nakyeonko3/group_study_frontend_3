@@ -1,18 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400, 500, 600, 700,800, 900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #313131;
+  min-height: 100vh;
+  background-color: #222;
+  /* font-size: ; */
 }
 
+@property --a {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+
+  100% {
+    --a: 360deg;
+  }
+}
+h2 {
+  color: aliceblue;
+}
 .container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #01dbc2 0%,
+    #01dbc2 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear infinite;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #01dbc2 0%,
+    #01dbc2 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
 
-  width: 40vw;
-  height: 60vh;
-  background-color: #222222;
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: 20px solid #222;
+  background: #303030;
 }
