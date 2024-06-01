@@ -1,3 +1,4 @@
+/*이 영상을 바탕으로 https://www.youtube.com/watch?v=Lt0nNisq_S8&t=12s*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400, 500, 600, 700,800, 900&display=swap");
 * {
   margin: 0;
@@ -168,10 +169,14 @@ input:focus {
   height: 2.2em;
   text-transform: uppercase;
   box-shadow: 0px 0px 20px 1px var(--form--animation--color);
+  cursor: pointer;
 }
 
-.formsigin > span {
-  font-size: 0.9em;
+.formsigin > input {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
 }
 
 .formforgot {
@@ -184,6 +189,7 @@ input:focus {
   font-size: 0.8em;
   margin: 4px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .form__item__signup {
