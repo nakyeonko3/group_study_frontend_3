@@ -3,27 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Form | 2024</title>
+    <title>Login Form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>hello, world!</h1>
-      <form>
-        <h2>Login</h2>
+      <form action="">
         <div class="form__item">
-          <span></span>
-          <input type="text" placeholder="username" />
+          <h2 class="form--capialize">Login</h2>
         </div>
-        <div class="form__item">
-          <input type="text" placeholder="password" />
+        <div class="form__item form--animaion">
+          <input class="form__item__input" type="text" placeholder="username" />
         </div>
-        <div class="form__item">
-          <input type="text" placeholder="sign in" />
+        <div class="form__item form--animaion form--animaion--delay">
+          <input
+            class="form__item__input"
+            type="password"
+            placeholder="password"
+          />
         </div>
-        <div class="form__item form__item--signUp">
-          <div>forgot password</div>
-          <div>signup</div>
+        <div class="form__item formsigin"><span>sign in</span></div>
+        <div class="form__item formforgot">
+          <div class="form__item__forgotpassword">forgot password</div>
+          <div class="form__item__signup">signup</div>
         </div>
       </form>
     </div>
