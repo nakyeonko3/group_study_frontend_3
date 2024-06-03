@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+}
+.main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.radioBtn input {
+  position: absolute;
+  left: -1000px;
+}
+
+.dot {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+.dot label {
+  background-color: #f6f3eb;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+.dot label:hover {
+  opacity: 1;
+}
+.radioBtn input:nth-child(1):checked ~ .dot label:nth-child(1),
+.radioBtn input:nth-child(2):checked ~ .dot label:nth-child(2),
+.radioBtn input:nth-child(3):checked ~ .dot label:nth-child(3),
+.radioBtn input:nth-child(4):checked ~ .dot label:nth-child(4),
+.radioBtn input:nth-child(5):checked ~ .dot label:nth-child(5) {
+  opacity: 1;
+}
+
+.main__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main__img div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: circle(0% at 50% 0%);
+  transition: 1.5s;
+}
+
+.radioBtn input:nth-child(1):checked ~ .main__img div:nth-child(1),
+.radioBtn input:nth-child(2):checked ~ .main__img div:nth-child(2),
+.radioBtn input:nth-child(3):checked ~ .main__img div:nth-child(3),
+.radioBtn input:nth-child(4):checked ~ .main__img div:nth-child(4),
+.radioBtn input:nth-child(5):checked ~ .main__img div:nth-child(5) {
+  clip-path: circle(100% at 50% 50%);
+  transition-delay: 1s;
+  background-position: left;
+}
+.main__img div h1 {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #fff;
+  font-weight: bold;
+}

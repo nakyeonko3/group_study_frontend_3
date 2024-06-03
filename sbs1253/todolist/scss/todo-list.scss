@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  font-family: 'Pretendard-Regular', sans-serif !important;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  min-height: 500px;
+  border: 1px dashed #000;
+  &__button {
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #1b1b1e;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &__button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  & h2 {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    width: 300px;
+  }
+  &__form {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input {
+    box-sizing: border-box;
+    padding: 5px;
+    height: 30px;
+    width: 80%;
+  }
+  &__item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #cfcfcf;
+    }
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    &::before {
+      content: '';
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border: 1px solid #000;
+    }
+  }
+  &__checkbox {
+    display: none;
+    &:checked {
+      & + .todo__check {
+        top: 5px;
+      }
+      & ~ .todo__text {
+        color: #7e7e7e;
+      }
+      & ~ .todo__text::before {
+        left: 100%;
+        transition-delay: 0s;
+      }
+      & ~ .todo__text::after {
+        left: 0;
+        transition-delay: 0.5s;
+      }
+    }
+  }
+  &__check {
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    transition: 0.5s;
+    &::after {
+      content: 'x';
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    &::before {
+      content: '';
+      background-color: #000;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: -100%;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      transition: 0.5s;
+    }
+  }
+}

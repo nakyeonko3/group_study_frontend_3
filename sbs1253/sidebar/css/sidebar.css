@@ -1,0 +1,101 @@
+:root {
+  --side-width: 60px;
+  --side-height: 60px;
+  --side-full-width: 300px;
+  --main-bg-color: #373a40;
+  --side-bg-color: #eeeeee;
+  --hover-bg-color: #686d76;
+  --side-icon-size: 1.5em;
+  --side-font-size: 1.2em;
+  --title-font-size: 1.5em;
+  --title-logo-size: 2.5em;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  font-family: 'Pretendard-Regular', sans-serif !important;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.side__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--side-width);
+  height: var(--side-height);
+}
+body {
+  position: relative;
+  height: 1000vh;
+  background-color: #373a40;
+}
+
+/* side */
+.side {
+  background-color: #eeeeee;
+  position: fixed;
+  height: 100%;
+  width: var(--side-width);
+  overflow: hidden;
+  transition: 0.5s;
+  white-space: nowrap;
+}
+.side:hover {
+  width: var(--side-full-width);
+}
+/* side title */
+.side__title {
+  margin-bottom: 50px;
+}
+.side__title a {
+  display: flex;
+  align-items: center;
+  height: var(--side-height);
+}
+.title__text {
+  font-size: var(--title-font-size);
+}
+
+.title__logo {
+  font-size: var(--title-logo-size);
+}
+/* side menu */
+
+.side__menu {
+  display: flex;
+  flex-direction: column;
+}
+li.menu__list {
+  transition: 0.5s;
+}
+li.menu__list:hover {
+  background-color: #686d76;
+}
+.menu__list a {
+  display: flex;
+  align-items: center;
+}
+.menu__icon {
+  font-size: var(--side-icon-size);
+}
+.menu__text {
+  font-size: var(--side-font-size);
+  padding-left: 10px;
+}
+
+/* bottom */
+.side__bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.bottom__image {
+  width: var(--side-width);
+  height: var(--side-height);
+}
