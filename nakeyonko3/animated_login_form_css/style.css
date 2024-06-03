@@ -1,204 +1,204 @@
 /*이 영상을 바탕으로 https://www.youtube.com/watch?v=Lt0nNisq_S8&t=12s*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400, 500, 600, 700,800, 900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", "sans-serif";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
 }
 
 @property --a {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
 }
 
 @property --body-background-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #222;
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #222;
 }
 
 @property --placeholder--color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0bcbc;
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #c0bcbc;
 }
 
 @property --form--login--color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: aliceblue;
+    syntax: "<color>";
+    inherits: false;
+    initial-value: aliceblue;
 }
 
 @property --form--animation--color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #01dbc2;
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #01dbc2;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: var(--body-background-color);
-  /* font-size: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--body-background-color);
+    /* font-size: ; */
 }
 
 @keyframes animate {
-  0% {
-    --a: 0deg;
-  }
+    0% {
+        --a: 0deg;
+    }
 
-  100% {
-    --a: 360deg;
-  }
+    100% {
+        --a: 360deg;
+    }
 }
 
 h2 {
-  color: aliceblue;
+    color: aliceblue;
 }
 .container {
-  position: relative;
-  width: 400px;
-  min-height: 400px;
+    position: relative;
+    width: 400px;
+    min-height: 400px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: repeating-conic-gradient(
-    from var(--a),
-    var(--form--animation--color) 0%,
-    var(--form--animation--color) 10%,
-    transparent 10%,
-    transparent 50%
-  );
-  animation: animate 6s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: repeating-conic-gradient(
+        from var(--a),
+        var(--form--animation--color) 0%,
+        var(--form--animation--color) 10%,
+        transparent 10%,
+        transparent 50%
+    );
+    animation: animate 6s linear infinite;
 }
 .container::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: repeating-conic-gradient(
-    from var(--a),
-    var(--form--animation--color) 0%,
-    var(--form--animation--color) 10%,
-    transparent 10%,
-    transparent 50%
-  );
-  animation: animate 6s linear infinite;
-  animation-delay: -1.5s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(
+        from var(--a),
+        var(--form--animation--color) 0%,
+        var(--form--animation--color) 10%,
+        transparent 10%,
+        transparent 50%
+    );
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
 }
 
 .container::after {
-  content: "";
-  position: absolute;
-  inset: 0.1em;
-  border: 20px solid #222;
-  background: #303030;
+    content: "";
+    position: absolute;
+    inset: 0.1em;
+    border: 20px solid #222;
+    background: #303030;
 }
 
 form {
-  z-index: 1000;
+    z-index: 1000;
 }
 
 .form__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
 }
 
 input::placeholder,
 .form--capialize {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 input::placeholder {
-  color: var(--placeholder--color);
+    color: var(--placeholder--color);
 }
 
 .form__item__input {
-  opacity: 1;
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  height: 100%;
-  color: white;
-  position: relative;
-  z-index: 10000;
-  left: 1em;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    z-index: 10000;
+    left: 1em;
 }
 
 input:hover,
 input:focus {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .form--animaion {
-  height: 2.7em;
-  position: relative;
-  background: repeating-conic-gradient(
-    from var(--a),
-    var(--form--animation--color) 0%,
-    var(--form--animation--color) 10%,
-    transparent 10%,
-    transparent 50%
-  );
-  animation: animate 6s linear infinite;
+    height: 2.7em;
+    position: relative;
+    background: repeating-conic-gradient(
+        from var(--a),
+        var(--form--animation--color) 0%,
+        var(--form--animation--color) 10%,
+        transparent 10%,
+        transparent 50%
+    );
+    animation: animate 6s linear infinite;
 }
 
 .form--animaion::after {
-  content: "";
-  background-color: var(--body-background-color);
-  position: absolute;
-  border: 0.1em solid black;
-  inset: 0.1em;
+    content: "";
+    background-color: var(--body-background-color);
+    position: absolute;
+    border: 0.1em solid black;
+    inset: 0.1em;
 }
 
 .form--animaion--delay {
-  animation-delay: -1.5s;
+    animation-delay: -1.5s;
 }
 
 .formsigin {
-  color: black;
-  background-color: var(--form--animation--color);
-  height: 2.2em;
-  text-transform: uppercase;
-  box-shadow: 0px 0px 20px 1px var(--form--animation--color);
-  cursor: pointer;
+    color: black;
+    background-color: var(--form--animation--color);
+    height: 2.2em;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 20px 1px var(--form--animation--color);
+    cursor: pointer;
 }
 
 .formsigin > input {
-  text-transform: uppercase;
-  background-color: transparent;
-  border: none;
-  font-size: 1em;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
 }
 
 .formforgot {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .form__item__forgotpassword,
 .form__item__signup {
-  font-size: 0.8em;
-  margin: 4px;
-  text-transform: uppercase;
-  cursor: pointer;
+    font-size: 0.8em;
+    margin: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .form__item__signup {
-  color: var(--form--animation--color);
+    color: var(--form--animation--color);
 }
 
 .form__item__forgotpassword {
-  color: var(--placeholder--color);
-  /* color: #8b8585; */
+    color: var(--placeholder--color);
+    /* color: #8b8585; */
 }
 
 /* .div:nth-of-type(2) {

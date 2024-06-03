@@ -11,31 +11,58 @@
 }
 
 body {
-  background: linear-gradient(#a8d6fe, #f2f3f3);
+  background: linear-gradient(#a8d6fe, #f2f3f3), no-repeat;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+body.dark-mode {
+  background: #242734;
+  transition: background-color 0.5s ease-in-out, background 0.5s ease-in-out;
+  box-shadow: none;
 }
 
 .container {
   width: var(--circle--container--width);
   height: var(--circle--container--height);
-  /* background-color: aliceblue; */
   overflow: visible;
-  border: 1px black solid;
   position: relative;
   top: -37vh;
 }
 
 .circle {
-  clip-path: circle(4em at 10% 50%);
-  position: absolute;
-  overflow: visible;
-  z-index: 1000;
-  /* clip-path: circle(5vw at 90% 50%); */
-  width: var(--circle--container--width);
-  height: var(--circle--container--height);
+  overflow: hidden;
+  border-radius: 50%;
+  width: 9em;
+  height: 9em;
   background-color: #ffffff;
+  box-shadow: 0 0 20px #ffffff; /* 그림자 효과 추가 */
+  cursor: pointer;
+  position: relative;
+  transition: left 3s ease-in-out;
 }
+
+.circle.dark-mode {
+  box-shadow: none;
+  position: relative;
+  left: 70%;
+  transition: left 3s ease-in-out; /* Add transition property here */
+}
+
+img {
+  width: 50vw;
+  position: absolute;
+  bottom: 0;
+  transition: left 3s ease-in-out;
+}
+
+/* clip-path: circle(4em at 15% 50%); */
+/* 이 방식으로 원을 만들 수도 있긴함. */
+/* overflow: visible를 했는데도 원이 겹치면 잘라지는 이유를 모르겠네 */
+
+/* z-index: 1000; 이거도 안 됨 */
