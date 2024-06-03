@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset.css 적용 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <!-- <link rel="stylesheet" href="../css/memu-list.css" /> -->
+    <link rel="stylesheet" href="../css/todo-list.css" />
+
+    <title>Menu List</title>
+    <script src="../js/todo-list.js" defer></script>
+  </head>
+  <body>
+    <div class="todo">
+      <h2>TODO LIST</h2>
+      <form class="todo__form">
+        <input class="todo__input" type="text" placeholder="할 일을 입력하세요." />
+        <button class="todo__button todo__button--add">추가</button>
+      </form>
+      <ul class="todo__items">
+        <li class="todo__item">
+          <label class="todo__label">
+            <input class="todo__checkbox" type="checkbox" />
+            <span class="todo__check"></span>
+            <span class="todo__text">오늘의 할일</span>
+          </label>
+          <button class="todo__button todo__button--delete">삭제</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

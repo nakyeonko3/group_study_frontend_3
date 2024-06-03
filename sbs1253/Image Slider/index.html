@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <!-- reset.css 적용 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="radioBtn">
+        <input id="slide1" type="radio" name="group" checked />
+        <input id="slide2" type="radio" name="group" />
+        <input id="slide3" type="radio" name="group" />
+        <input id="slide4" type="radio" name="group" />
+        <input id="slide5" type="radio" name="group" />
+        <div class="dot">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+          <label for="slide5"></label>
+        </div>
+        <div class="main__img">
+          <div for="slide1" alt="image" style="--img: url('images/image-1.jpg')"><h1>slide 1</h1></div>
+          <div for="slide1" alt="image" style="--img: url('images/image-2.jpg')"><h1>slide 2</h1></div>
+          <div for="slide1" alt="image" style="--img: url('images/image-3.jpg')"><h1>slide 3</h1></div>
+          <div for="slide1" alt="image" style="--img: url('images/image-4.jpg')"><h1>slide 4</h1></div>
+          <div for="slide1" alt="image" style="--img: url('images/image-5.jpg')"><h1>slide 5</h1></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

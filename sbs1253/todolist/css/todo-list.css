@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  font-family: "Pretendard-Regular", sans-serif !important;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  min-height: 500px;
+  border: 1px dashed #000;
+}
+.todo__button {
+  box-sizing: border-box;
+  padding: 5px;
+  height: 30px;
+  background-color: #fff;
+  border: 2px solid #1b1b1e;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.todo__button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.todo h2 {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  width: 300px;
+}
+.todo__form {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.todo__input {
+  box-sizing: border-box;
+  padding: 5px;
+  height: 30px;
+  width: 80%;
+}
+.todo__item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.3s;
+}
+.todo__item:hover {
+  background-color: #cfcfcf;
+}
+.todo__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.todo__label::before {
+  content: "";
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border: 1px solid #000;
+}
+.todo__checkbox {
+  display: none;
+}
+.todo__checkbox:checked + .todo__check {
+  top: 5px;
+}
+.todo__checkbox:checked ~ .todo__text {
+  color: #7e7e7e;
+}
+.todo__checkbox:checked ~ .todo__text::before {
+  left: 100%;
+  transition-delay: 0s;
+}
+.todo__checkbox:checked ~ .todo__text::after {
+  left: 0;
+  transition-delay: 0.5s;
+}
+.todo__check {
+  position: absolute;
+  top: 100%;
+  left: 4px;
+  transition: 0.5s;
+}
+.todo__check::after {
+  content: "x";
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.todo__text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+}
+.todo__text::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.todo__text::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: -100%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  transition: 0.5s;
+}
