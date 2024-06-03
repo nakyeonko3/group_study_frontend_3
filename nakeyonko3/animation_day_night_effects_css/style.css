@@ -1,0 +1,41 @@
+@property --circle--container--width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 80vw;
+}
+
+@property --circle--container--height {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 23vh;
+}
+
+body {
+  background: linear-gradient(#a8d6fe, #f2f3f3);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: var(--circle--container--width);
+  height: var(--circle--container--height);
+  /* background-color: aliceblue; */
+  overflow: visible;
+  border: 1px black solid;
+  position: relative;
+  top: -37vh;
+}
+
+.circle {
+  clip-path: circle(4em at 10% 50%);
+  position: absolute;
+  overflow: visible;
+  z-index: 1000;
+  /* clip-path: circle(5vw at 90% 50%); */
+  width: var(--circle--container--width);
+  height: var(--circle--container--height);
+  background-color: #ffffff;
+}
