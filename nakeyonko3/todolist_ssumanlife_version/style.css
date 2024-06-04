@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin: 300px auto;
+  box-sizing: border-box;
+}
+.container div:first-child {
+  margin-bottom: 20px;
+}
+
+.container Input {
+  border: 1px solid #333;
+  height: 30px;
+  margin-bottom: 20px;
+}
