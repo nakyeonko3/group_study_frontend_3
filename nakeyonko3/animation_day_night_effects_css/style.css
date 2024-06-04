@@ -81,12 +81,17 @@ body.dark-mode {
 }
 
 .city {
+  display: flex;
+  /* background: url(https://i.imgur.com/qX9rmMi.png); */
   background: url(./Night_City_Silhouette_PNG_Clip_Art_Image.png);
   width: 100%;
-  min-height: 40vh;
+  height: 400px;
+  position: relative;
+  bottom: 0px;
 
-  background-size: cover;
+  background-size: contain;
   background-repeat: repeat-x;
+  background-position: bottom;
   animation: animate 400s linear infinite;
 }
 
