@@ -160,3 +160,6 @@ dist
 .history
 .ionide.vscode
 .vscode/settings.json
+.git
+.gitignore~
+..gitignore.un~
