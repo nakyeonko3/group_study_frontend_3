@@ -8,39 +8,32 @@
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form action="http://localhost:5000/login" method="post">
         <div class="form__item">
           <h2 class="form--capialize">Login</h2>
         </div>
         <div class="form__item form--animaion">
-          <input class="form__item__input" type="text" placeholder="username" />
+          <input
+            class="form__item__input"
+            type="text"
+            name="username"
+            placeholder="username"
+          />
         </div>
         <div class="form__item form--animaion form--animaion--delay">
           <input
             class="form__item__input"
+            name="password"
             type="password"
             placeholder="password"
           />
         </div>
-        <div
-          class="form__item formsigin"
-          onclick="location.href='./.tmp/forgot.html'"
-        >
+        <div class="form__item formsigin">
           <input type="submit" value="sign in" />
         </div>
         <div class="form__item formforgot">
-          <div
-            class="form__item__forgotpassword"
-            onclick="location.href='./.tmp/forgot.html'"
-          >
-            forgot password
-          </div>
-          <div
-            class="form__item__signup"
-            onclick="location.href='./.tmp/forgot.html'"
-          >
-            signup
-          </div>
+          <div class="form__item__forgotpassword">forgot password</div>
+          <div class="form__item__signup">signup</div>
         </div>
       </form>
     </div>
