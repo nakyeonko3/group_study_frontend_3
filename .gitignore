@@ -159,3 +159,13 @@ dist
 # Ignore all local history of files
 .history
 .ionide.vscode
+.vscode/settings.json
+.git
+.gitignore~
+..gitignore.un~
+.git
+.gitignore~
+..gitignore.un~
+.gitignore.swp
+
+nakeyonko3/blog-project/astro_blog_project

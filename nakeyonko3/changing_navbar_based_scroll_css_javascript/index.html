@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>changing_navbar_based_scroll_css_javascript</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#" class="brand">
+        <span class="brand__logo"><ion-icon name="logo-apple"></ion-icon></span>
+        <span class="brand__text">Apple</span>
+      </a>
+      <ul class="iconMenu">
+        <li style="--i: 1">
+          <a href="#">
+            <span class="iconMenu__text"> Home </span>
+            <span class="iconMenu__icon"
+              ><ion-icon name="home-outline"></ion-icon
+            ></span>
+          </a>
+        </li>
+        <li style="--i: 2">
+          <a href="#">
+            <span class="iconMenu__text"> Video </span>
+            <span class="iconMenu__icon"
+              ><ion-icon name="videocam-outline"></ion-icon
+            ></span>
+          </a>
+        </li>
+        <li style="--i: 3">
+          <a href="#">
+            <span class="iconMenu__text"> Photo </span>
+            <span class="iconMenu__icon"
+              ><ion-icon name="image-outline"></ion-icon
+            ></span>
+          </a>
+        </li>
+        <li style="--i: 4">
+          <a href="#">
+            <span class="iconMenu__text"> Team </span>
+            <span class="iconMenu__icon"
+              ><ion-icon name="people-outline"></ion-icon
+            ></span>
+          </a>
+        </li>
+        <li style="--i: 5">
+          <a href="#">
+            <span class="iconMenu__text"> Contact </span>
+            <span class="iconMenu__icon"
+              ><ion-icon name="mail-outline"></ion-icon
+            ></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

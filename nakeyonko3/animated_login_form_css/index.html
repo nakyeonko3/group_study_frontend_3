@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="http://localhost:5000/login" method="post">
+        <div class="form__item">
+          <h2 class="form--capialize">Login</h2>
+        </div>
+        <div class="form__item form--animaion">
+          <input
+            class="form__item__input"
+            type="text"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+        <div class="form__item form--animaion form--animaion--delay">
+          <input
+            class="form__item__input"
+            name="password"
+            type="password"
+            placeholder="password"
+          />
+        </div>
+        <div class="form__item formsigin">
+          <input type="submit" value="sign in" />
+        </div>
+        <div class="form__item formforgot">
+          <div class="form__item__forgotpassword">forgot password</div>
+          <div class="form__item__signup">signup</div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+@property --circle--container--width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 100vw;
+}
+
+@property --circle--container--height {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 30vh;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 2500vw;
+  }
+}
+
+body {
+  background: linear-gradient(#a8d6fe, #f2f3f3), no-repeat;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.5s ease-in-out;
+}
+
+body.dark-mode {
+  background: #242734;
+  transition: background-color 0.5s ease-in-out, background 0.5s ease-in-out;
+  box-shadow: none;
+}
+
+.container {
+  width: var(--circle--container--width);
+  height: var(--circle--container--height);
+  overflow: visible;
+  position: relative;
+}
+
+.circle {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 9em;
+  height: 9em;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px #ffffff;
+  cursor: pointer;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  border: none;
+  transition: left 0.5s ease-in-out;
+}
+
+.circle.dark-mode {
+  box-shadow: none;
+  border: none;
+  left: 75%;
+  transition: left 0.5s ease-in-out;
+  position: relative;
+  overflow: visible;
+}
+
+.circle.dark-mode::after {
+  content: "";
+  border-radius: 50%;
+  background-color: #242734;
+  width: 9em;
+  height: 9em;
+  border: none;
+  position: absolute;
+  top: -2em;
+  left: 1em;
+}
+
+.city {
+  display: flex;
+  /* background: url(https://i.imgur.com/qX9rmMi.png); */
+  background: url(./Night_City_Silhouette_PNG_Clip_Art_Image.png);
+  width: 100%;
+  height: 400px;
+  position: relative;
+  bottom: 0px;
+
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  animation: animate 400s linear infinite;
+}
+
+/* clip-path: circle(4em at 15% 50%); */
+/* 이 방식으로 원을 만들 수도 있긴함. */
+/* overflow: visible를 했는데도 원이 겹치면 잘라지는 이유를 모르겠네 */
+
+/* z-index: 1000; 이거도 안 됨 */
+/*   content: ""; 를 생략하면 ::after가 만들어지지 않네 */
+/* 
+배경화면 맨 아래 도시가 움직이는 원리는 계속 왼쪽으로 그림을 이동시키는 동시에
+베경화면의 사진을 가로 전체를 체우지 못하면 배경화면 사진을 반복해서 그리게 했다.
+그래서 사진을 옆으로 이동시키는 동시에 화면을 같은 사진 여러개를 반복해서 체우게 하는 방식으로 그림이 움직인다.
+*/
+/* 
+속도는 
+전체 움직이는 거리 @frames 안에 정의된 움직이는 거리가 길어질 수록 
+그리고 .city에서 정의내린 시간이 길어질 수록 느려진다. 
+*/
+
+/* 
+전체적인 위치와 레이아웃을 먼저 잡고 그려야 편하다.
+
+*/
+
+/* 
+  background-size: cover;
+  이걸 이용해서 사진이 항목 전체를 채우게 만들었다.
+*/
